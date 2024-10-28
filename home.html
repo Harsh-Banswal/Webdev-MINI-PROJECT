@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0px;
+            padding: 20px 10px;
+            /* padding: 20px; */
+            /* Optional padding */
+        }
+
+
+
+        #search {
+            border-radius: 10px 0 0 10px;
+            /* Rounded corners on the left */
+            height: 38px;
+            /* Set a height for alignment */
+            width: 500px;
+            background-color: black;
+            border: 1px solid white;
+            padding-left: 8px;
+            font-size: 16px;
+            /* Font size for better readability */
+            color: white;
+        }
+
+        #signin {
+            border-radius: 10px;
+            height: 40px;
+            /* Match the height of the search bar */
+            width: 70px;
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+
+        #signin:hover {
+            background-color: rgb(104, 102, 102)
+        }
+
+        .search-icon {
+            display: flex;
+            align-items: center;
+            /* Center the icon vertically */
+            height: 40px;
+            /* Match the height */
+            background-color: black;
+            /* Same background as the search bar */
+            border: 1px solid white;
+            /* Border to match */
+            border-left: none;
+            /* Remove left border */
+            border-radius: 0 10px 10px 0;
+            /* Rounded corners on the right */
+            padding: 0 10px;
+            /* Padding around the icon */
+        }
+
+        .search-icon:hover {
+            background-color: rgb(104, 102, 102)
+        }
+
+        .search-icon i {
+            font-size: 20px;
+            /* Adjust icon size */
+            color: white;
+            /* Icon color */
+        }
+
+        .formsearch {
+            display: flex;
+            align-items: center;
+            /* Align items in the form */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        .nav-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2rem;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            height: 3px;
+            width: 25px;
+            background-color: #333;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        /* @media (max-width: 768px) { */
+        .nav-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu.active {
+            display: flex;
+        }
+
+        .nav-item {
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+
+        /* .searchbar {
+            display: flex;
+            justify-content: space-around;
+        } */
+
+        /* .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }  */
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* padding-right: 40px; */
+            /* margin: 0px; */
+            /* padding: 0px; */
+        }
+
+        .logo{
+            margin-left: 2rem;
+        }
+
+        .navbar{
+            margin-left: 0px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="searchbar">
+        <!-- <div class="ham">
+            <header class="header"></header>
+            <nav class="navbar"> -->
+             <!-- <a href="#" class="nav-logo">MyWebsite</a> -->
+                <!-- <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+            </header>
+        </div> -->
+
+        <div class="top">
+            <!-- <header class="header"></header> -->
+            <!-- <a href="#" class="nav-logo">MyWebsite</a> -->
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <a href="home.html"><img src="a.jpg" alt="PlayPulse" width="150" class="logo"> </a>
+            </nav>
+            <!-- </header> -->
+            
+           
+            <!-- Example image source -->
+            <form class="formsearch" action="#">
+                <input type="text" id="search" placeholder="Search">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </form>
+            <a href="signup.html" target="_blank"><button id="signin">Sign In</button></a>
+        </div>
+
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
